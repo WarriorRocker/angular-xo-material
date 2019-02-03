@@ -1,0 +1,19 @@
+@import '../../../../shared/_variables.scss';
+
+:host {
+  ::ng-deep {
+    code {
+      padding: 3px;
+      background: rgba(0,0,0,.03);
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

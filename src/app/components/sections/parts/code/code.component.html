@@ -1,0 +1,11 @@
+<div class="code mat-elevation-z1">
+  <div class="code-heading">
+    <span class="code-title" *ngIf="section.title">{{section.title}}</span>
+    <div class="code-sep"></div>
+    <button mat-button class="code-copy" [clipboard]="section.content">
+      <mat-icon>file_copy</mat-icon>
+    </button>
+  </div>
+  <!--<pre><code highlight [textContent]="section.content" [language]="section.languages ? [section.languages] : null"></code></pre>-->
+  <pre><code [textContent]="section.content"></code></pre>
+</div>

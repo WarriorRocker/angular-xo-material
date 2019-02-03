@@ -1,0 +1,5 @@
+<mat-nav-list class="mat-elevation-z1">
+  <a *ngFor="let item of section.items; let last = last" mat-list-item
+     [routerLink]="item.href" routerLinkActive="current-item"
+     [class.last-item]="last">{{item.title}}</a>
+</mat-nav-list>

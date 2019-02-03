@@ -1,0 +1,70 @@
+@import '../../shared/_variables.scss';
+
+:host {
+  .breadcrumbs {
+    background-color: $color-primary;
+    padding: 0 24px;
+
+    .breadcrumbs-inner {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, .8);
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+
+        ::ng-deep {
+          .mat-icon {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .breadcrumb-sep {
+          color: rgba(255, 255, 255, 0.5);
+          margin: 0 3px;
+          display: flex;
+          align-items: center;
+          cursor: default;
+        }
+
+        .breadcrumb-link {
+          color: #FFFFFF;
+          text-decoration: none;
+          font-size: 14px;
+          opacity: .8;
+          transition: .2s ease;
+          display: flex;
+          align-items: center;
+          cursor: default;
+        }
+
+        a.breadcrumb-link {
+          cursor: pointer;
+
+          &:not(.breadcrumb-icon):hover {
+            text-decoration: underline;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

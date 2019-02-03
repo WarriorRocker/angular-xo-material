@@ -1,0 +1,11 @@
+<div class="contents">
+  <div class="contents-inner">
+    <div class="contents-heading">Contents</div>
+    <nav>
+      <a class="contents-link" *ngFor="let link of links"
+         [href]="_rootUrl + '#' + link.id"
+         [ngClass]="'link-space-' + link.type"
+         [class.link-active]="link.active">{{link.name}}</a>
+    </nav>
+  </div>
+</div>

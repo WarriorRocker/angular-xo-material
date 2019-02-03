@@ -1,0 +1,33 @@
+@import '../../../../../shared/_variables.scss';
+
+:host {
+  .heading-link {
+    text-decoration: none;
+    margin-left: -30px;
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+      .mat-icon {
+        visibility: hidden;
+        color: $color-primary;
+      }
+
+      &:focus {
+        .mat-icon {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .heading-link {
+      a {
+        .mat-icon {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

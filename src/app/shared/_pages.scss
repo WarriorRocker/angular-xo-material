@@ -1,0 +1,26 @@
+@import '_variables.scss';
+
+@mixin page-container() {
+  overflow-y: auto;
+
+  .content {
+    min-height: calc(100vh - 56px);
+    background-color: #fafafa;
+
+    .content-inner {
+      width: 95%;
+      max-width: 940px;
+      padding-top: 40px;
+      padding-bottom: 60px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+
+      @media ($mat-xsmall) {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

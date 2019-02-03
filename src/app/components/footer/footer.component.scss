@@ -1,0 +1,66 @@
+@import '~@angular/material/theming';
+@import '../../shared/_variables.scss';
+
+:host {
+  .footer {
+    padding: 24px;
+    background-color: $color-primary;
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+
+      @media($mat-small) {
+        flex-direction: column;
+      }
+
+      .footer-item {
+        flex: 1;
+        color: #FFFFFF;
+        font-size: 12px;
+
+        ::ng-deep {
+          a {
+            color: #FFFFFF;
+          }
+        }
+
+        &.footer-logo {
+          display: flex;
+          align-items: center;
+
+          .angular-xo-logo-white {
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+            background-image: url('../../../assets/svg/angular-xo-white.svg');
+          }
+
+          .footer-link {
+            font-size: 20px;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &.footer-version {
+          text-align: center;
+        }
+
+        &.footer-legal {
+          min-width: 225px;
+          text-align: right;
+
+          .footer-inner-legal {
+            display: inline-block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

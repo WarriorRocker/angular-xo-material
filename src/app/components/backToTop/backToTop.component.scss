@@ -1,0 +1,41 @@
+@import '../../shared/_variables.scss';
+
+:host {
+  position: sticky;
+  bottom: 40px;
+  align-self: flex-end;
+
+  .back-to-top {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+
+    .mat-button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      min-width: initial;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.87);
+      background-color: #FFFFFF;
+      @include mat-elevation(2);
+
+      ::ng-deep {
+        .mat-button-focus-overlay {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      &:hover {
+        @include mat-elevation(6);
+      }
+    }
+  }
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,.8);*/
+}

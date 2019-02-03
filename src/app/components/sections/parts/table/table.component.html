@@ -1,0 +1,16 @@
+<table class="mat-elevation-z1">
+  <thead *ngIf="section.table.header.length">
+    <tr>
+      <th *ngFor="let header of section.table.header" [innerHtml]="header.c"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of section.table.body; let last = last;" [class.last-row]="last">
+      <td *ngFor="let cell of row; let index = index;">
+        <span class="cell-title" *ngIf="section.table.header.length"
+              [innerHtml]="section.table.header[index].c"></span>
+        <div class="cell-content" [innerHtml]="cell.c"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>

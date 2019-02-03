@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@import '~@angular/material/theming';
+//@import '~highlight.js/styles/vs.css';
+
+@import 'app/shared/_variables.scss';
+
+@include mat-core();
+@include angular-material-theme($app-theme);
+
+body {
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
