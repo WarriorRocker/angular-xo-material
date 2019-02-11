@@ -1,27 +1,6 @@
-# AngularXoMaterial
+# Xo for Angular WordPress Material Theme
+The theme used for the Xo for Angular documentation site, open-sourced as a working example of the features available within Xo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+Use `ng serve` to rapidly develop locally, taking advantage of file watching to compile and reload the development site. Use `ng build` to create a distribution and let Xo serve the site through the main domain without any additional server setup.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Once the theme has been built using `ng build` or `ng build --prod` the source folders are no longer necessary. A theme developer may opt to publish a theme built with Xo that does not include the source or build tools.
