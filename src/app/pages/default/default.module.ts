@@ -7,7 +7,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { PostResolver } from 'angular-xo';
+import { XoPostResolver } from 'angular-xo';
 
 import { XoMaterialDefaultPageComponent } from './default.component';
 import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadcrumbs.module';
@@ -22,7 +22,7 @@ import { XoMaterialFooterModule } from '../../components/footer/footer.module';
         path: '',
         component: XoMaterialDefaultPageComponent,
         resolve: {
-          post: PostResolver
+          post: XoPostResolver
         }
       }
     ])

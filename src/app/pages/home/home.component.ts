@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { PostComponent } from 'angular-xo';
+import { XoPostComponent } from 'angular-xo';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class XoMaterialHomePageComponent extends PostComponent { }
+export class XoMaterialHomePageComponent extends XoPostComponent { }

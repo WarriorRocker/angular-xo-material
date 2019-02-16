@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Globals, Config, Menus, ApiMenusService } from 'angular-xo';
+import { XoGlobals, XoConfig, XoMenus, XoApiMenusService } from 'angular-xo';
 
 @Component({
   selector: 'xo-material-header',
@@ -8,10 +8,10 @@ import { Globals, Config, Menus, ApiMenusService } from 'angular-xo';
   styleUrls: ['./header.component.scss']
 })
 export class XoMaterialHeaderComponent implements OnInit {
-  appConfig: Config.AppConfig;
-  navItems: Array<Menus.NavigationItem>;
+  appConfig: XoConfig.AppConfig;
+  navItems: Array<XoMenus.NavigationItem>;
 
-  constructor(private _globals: Globals, private _menus: ApiMenusService) {
+  constructor(private _globals: XoGlobals, private _menus: XoApiMenusService) {
     this.appConfig = this._globals.appConfig;
   }
 

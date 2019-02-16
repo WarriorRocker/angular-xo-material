@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 
 import { tap, filter } from 'rxjs/operators';
 
-import { PostService } from 'angular-xo';
+import { XoPostService } from 'angular-xo';
 
 declare var gtag: any;
 
@@ -17,7 +17,7 @@ export class XoMaterialAppComponent implements OnInit {
   uaTrackingId: string = 'UA-125273296-1';
 
   constructor(private _router: Router, private _title: Title,
-    private _post: PostService) {
+    private _post: XoPostService) {
     this._post.post$
       .subscribe((post) => {
         if (post)

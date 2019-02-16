@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Globals, Config, ApiOptionsService } from 'angular-xo';
+import { XoGlobals, XoConfig, XoApiOptionsService } from 'angular-xo';
 
 @Component({
   selector: 'xo-material-footer',
@@ -8,10 +8,10 @@ import { Globals, Config, ApiOptionsService } from 'angular-xo';
   styleUrls: ['./footer.component.scss']
 })
 export class XoMaterialFooterComponent implements OnInit {
-  appConfig: Config.AppConfig;
+  appConfig: XoConfig.AppConfig;
   footer: any;
 
-  constructor(private _globals: Globals, private _options: ApiOptionsService) {
+  constructor(private _globals: XoGlobals, private _options: XoApiOptionsService) {
     this.appConfig = this._globals.appConfig;
   }
 

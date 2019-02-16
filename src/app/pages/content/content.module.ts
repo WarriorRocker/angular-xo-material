@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { PostResolver } from 'angular-xo';
+import { XoPostResolver } from 'angular-xo';
 
 import { XoMaterialContentPageComponent } from './content.component';
 import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadcrumbs.module';
@@ -31,7 +31,7 @@ import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.
         path: '',
         component: XoMaterialContentPageComponent,
         resolve: {
-          post: PostResolver
+          post: XoPostResolver
         }
       }
     ])
