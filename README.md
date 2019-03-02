@@ -67,8 +67,8 @@ The easiest method as it makes use of your previously configured server to acces
   
 - `npm run deploy` or `ng build --prod --deploy-url /wp-content/themes/angular-xo-material/dist/`
   - The same as `npm run deploy` except assets and application code are minified with the Angular App configured for production.
-- `npm run watch` or `ng build --watch --deploy-url /wp-content/themes/angular-xo-material/dist/`
 
+- `npm run watch` or `ng build --watch --deploy-url /wp-content/themes/angular-xo-material/dist/`
   - The same as `npm run deploy` except once the initial compilation is complete the script will be placed into a watch mode for file changes that may trigger recompliation. A refresh of the page is required to see the updated changes.
 
 #### Building with ng serve
