@@ -30,36 +30,47 @@
             ],
             "scripts": []
           },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
-            }
-          }
+					"configurations": {
+						"local": {
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.local.ts"
+								}
+							]
+						},
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true
+						}
+					}
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "angular-xo-material:build"
           },
-          "configurations": {
-            "production": {
-              "browserTarget": "angular-xo-material:build:production"
-            }
-          }
+					"configurations": {
+						"local": {
+							"browserTarget": "angular-xo-material:build:local"
+						},
+						"production": {
+							"browserTarget": "angular-xo-material:build:production"
+						}
+					}
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

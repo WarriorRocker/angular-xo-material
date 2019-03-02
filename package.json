@@ -16,7 +16,7 @@
 		"url": "https://github.com/WarriorRocker/angular-xo-material/issues"
 	},
 	"scripts": {
-		"serve": "ng serve",
+		"serve": "ng serve --configuration local",
 		"build": "ng build --deploy-url /wp-content/themes/angular-xo-material/dist/",
 		"deploy": "ng build --prod --deploy-url /wp-content/themes/angular-xo-material/dist/",
 		"lint": "ng lint"
