@@ -19,6 +19,7 @@
 		"serve": "ng serve --configuration local",
 		"build": "ng build --deploy-url /wp-content/themes/angular-xo-material/dist/",
 		"deploy": "ng build --prod --deploy-url /wp-content/themes/angular-xo-material/dist/",
+		"watch": "ng build --watch --deploy-url /wp-content/themes/angular-xo-material/dist/",
 		"lint": "ng lint"
 	},
 	"private": true,
