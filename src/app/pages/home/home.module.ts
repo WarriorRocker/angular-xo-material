@@ -15,7 +15,6 @@ import { MatButtonModule, MatIconModule } from '@angular/material';
 
 import { XoMaterialHomePageComponent } from './home.component';
 import { XoMaterialSectionsModule } from '../../components/sections/sections.module';
-import { XoMaterialFooterModule } from '../../components/footer/footer.module';
 
 @NgModule({
   imports: [
@@ -23,7 +22,6 @@ import { XoMaterialFooterModule } from '../../components/footer/footer.module';
     MatButtonModule,
     MatIconModule,
     XoMaterialSectionsModule,
-    XoMaterialFooterModule,
     RouterModule.forChild([
       {
         path: '',

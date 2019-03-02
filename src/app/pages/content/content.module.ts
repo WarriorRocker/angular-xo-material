@@ -14,7 +14,6 @@ import { XoPostResolver } from 'angular-xo';
 import { XoMaterialContentPageComponent } from './content.component';
 import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadcrumbs.module';
 import { XoMaterialSectionsModule } from '../../components/sections/sections.module';
-import { XoMaterialFooterModule } from '../../components/footer/footer.module';
 import { XoMaterialContentsModule } from '../../components/contents/contents.module';
 import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.module';
 
@@ -24,7 +23,6 @@ import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.
     XoMaterialBreadcrumbsModule,
     XoMaterialSectionsModule,
     XoMaterialContentsModule,
-    XoMaterialFooterModule,
     XoMaterialBackToTopModule,
     RouterModule.forChild([
       {

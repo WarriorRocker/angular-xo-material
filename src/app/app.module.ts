@@ -8,6 +8,7 @@ import { XoModule, XoRouteService, XoInitRoutes } from 'angular-xo';
 import { XoMaterialAppLazyRoutes } from './app.routing';
 import { XoMaterialAppComponent } from './app.component';
 import { XoMaterialHeaderModule } from './components/header/header.module';
+import { XoMaterialFooterModule } from './components/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { XoMaterialHeaderModule } from './components/header/header.module';
     BrowserAnimationsModule,
     XoModule,
     RouterModule.forRoot(XoMaterialAppLazyRoutes),
-    XoMaterialHeaderModule
+    XoMaterialHeaderModule,
+	XoMaterialFooterModule
   ],
   providers: [
     {

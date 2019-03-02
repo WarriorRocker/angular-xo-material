@@ -1,12 +1,7 @@
 @import '_variables.scss';
 
 @mixin page-container() {
-  overflow-y: auto;
-
   .content {
-    min-height: calc(100vh - 56px);
-    background-color: #fafafa;
-
     .content-inner {
       width: 95%;
       max-width: 940px;
