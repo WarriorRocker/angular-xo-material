@@ -15,6 +15,22 @@ This theme comes compiled for production so all assets and application code are 
 2. Download the latest Xo Material theme from the releases page, upload, and activate within WordPress.
 3. Create menus, pages, posts, and other content and let Xo do the heavy lifting.
 
+This theme also makes use of ACF Pro, a fantastic plugin for adding configurable fields to various items within WordPress such as pages, posts, menus, etc. Without ACF installed only the default theme is usable as it only makes use of the wordpress default editor.
+
+## Getting Started
+
+1. Rebuild the Xo Templates Cache. Depending on the order in which the theme and plugin were installed/activated or if template changes have occured it will be necessary to rebuild the cache of templates within WordPress
+   - From the Xo -> Tools main tab click the "Rebuild Templates Cache" button.
+   - This is not necessary if the Reader or Cache are disabled from the Xo -> General Options -> Templates tab.
+   
+2. Set the Redirect Mode on the Xo -> General Options -> Index to Live and Save.
+   - Check that the Src Index is set as `/src/index.html`.
+   - Lastly check that the Dist Index is set as `/dist/index.html`.
+   
+3. Using the Live Redirect Mode allows WordPress and other plugins to inject code and content in your theme. Options to include this and the App Config are found under the Live Index section on the Xo -> General Settings -> Index tab.
+   - Check that that the App Config is enabled, this is necessary to instruct the Angular App about the location of the Xo API and other WordPress or theme settings.
+   - Optionally enable Header (wp_head) and Footer (wp_footer) to be included in the index. This theme does not use this and if nto required by other plugins should be disabled to save on performance.
+
 ## Development
 
 This theme additionally comes with all source files and configuration info necessary to develop, modify, and debug the Angular App running within the theme.
@@ -76,8 +92,8 @@ The easiest method as it makes use of your previously configured server to acces
 Running with `ng serve` we need a way to reference our local `angularxo.local` server from within the live server typically running at `localhost:4200`. This is made possible by adding an additional build configuration invoked by running the below command:
 
 - `npm run serve` or `ng serve --configuration local`
-  - Run `ng serve` and include the App Config specified in `/app/src/environments/environment.local.ts` within the theme folder.
-  
-If you run the local WordPress server from a host other than `angularxo.local` it is required that this be updated in the local environment file at `/app/src/environments/environment.local.ts` within the theme folder.
+  - Run `ng serve` and include the App Config specified in `/src/environments/environment.local.ts` within the theme folder.
+
+If you run the local WordPress server from a host other than `angularxo.local` it is required that this be updated in the local environment file at `/src/environments/environment.local.ts` within the theme folder.
 
 This is necessary as Xo within WordPress will not have the opportunity to parse the index file and add this configuration dynamically using the Live Redirect Mode. Additionally it is possible to specify this configuration manually for the production environment file and use the faster Offline Redirect Mode.
