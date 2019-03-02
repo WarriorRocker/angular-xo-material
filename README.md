@@ -62,10 +62,22 @@ It is possible to use the Angular CLI to build, modify, and add new modules and 
 The easiest method as it makes use of your previously configured server to access your WordPress as normally through `http://angularxo.local`. This can be accomplished using one of the following commands:
 
 - `npm run build` or `ng build --deploy-url /wp-content/themes/angular-xo-material/dist/`
-  - Run a build to the dist folder at `/wp-content/themes/angular-xo-material/dist/`. This is important as unlike a typical Angular App where the files in the `/dist/` folder are deployed to the root of the server these files are actually nested within the theme folder in WordPress. The Angular App will be in debug mode which may emit more verbose information on the console, additional resource map files, and will not be minified.
+  - Run a build to the dist folder at `/wp-content/themes/angular-xo-material/dist/`. This is important as unlike a typical Angular App where the files in the `/dist/` folder are deployed to the root of the server these files are actually nested within the theme folder in WordPress.
+  - The Angular App will be in debug mode which may emit more verbose information on the console, additional resource map files, and assets and application files will not be minified.
   
 - `npm run deploy` or `ng build --prod --deploy-url /wp-content/themes/angular-xo-material/dist/`
   - The same as `npm run deploy` except assets and application code are minified with the Angular App configured for production.
 - `npm run watch` or `ng build --watch --deploy-url /wp-content/themes/angular-xo-material/dist/`
 
   - The same as `npm run deploy` except once the initial compilation is complete the script will be placed into a watch mode for file changes that may trigger recompliation. A refresh of the page is required to see the updated changes.
+
+#### Building with ng serve
+
+Running with `ng serve` we need a way to reference our local `angularxo.local` server from within the live server typically running at `localhost:4200`. This is made possible by adding an additional build configuration invoked by running the below command:
+
+- `npm run serve` or `ng serve --configuration local`
+  - Run `ng serve` and include the App Config specified in `/app/src/environments/environment.local.ts` within the theme folder.
+  
+If you run the local WordPress server from a host other than `angularxo.local` it is required that this be updated in the local environment file at `/app/src/environments/environment.local.ts` within the theme folder.
+
+This is necessary as Xo within WordPress will not have the opportunity to parse the index file and add this configuration dynamically using the Live Redirect Mode. Additionally it is possible to specify this configuration manually for the production environment file and use the faster Offline Redirect Mode.
