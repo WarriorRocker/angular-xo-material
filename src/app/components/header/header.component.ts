@@ -9,7 +9,8 @@ import { XoGlobals, XoConfig, XoMenus, XoApiMenusService } from 'angular-xo';
 })
 export class XoMaterialHeaderComponent implements OnInit {
   appConfig: XoConfig.AppConfig;
-  navItems: Array<XoMenus.NavigationItem>;
+  navItemsLeft: Array<XoMenus.NavigationItem>;
+  navItemsRight: Array<XoMenus.NavigationItem>;
 
   constructor(private _globals: XoGlobals, private _menus: XoApiMenusService) {
     this.appConfig = this._globals.appConfig;
@@ -20,10 +21,16 @@ export class XoMaterialHeaderComponent implements OnInit {
   }
 
   getNavigation() {
-    this._menus.get('header')
+    this._menus.get('header_left')
       .subscribe((response) => {
         if (response.success)
-          this.navItems = response.items;
+          this.navItemsLeft = response.items;
+      });
+
+    this._menus.get('header_right')
+      .subscribe((response) => {
+        if (response.success)
+          this.navItemsRight = response.items;
       });
   }
 }

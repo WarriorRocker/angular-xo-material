@@ -4,8 +4,8 @@ add_action('init', function() {
 	add_theme_support('title-tag');
 
 	register_nav_menus(array(
-		'header' => __('Header'),
-		'sidebar' => __('Sidebar')
+		'header_left' => __('Header Left'),
+		'header_right' => __('Header Right')
 	));
 });
 

@@ -29,22 +29,30 @@
             background-color: rgba(0, 0, 0, 0.15);
           }
 
-          .angular-xo-icon-solid {
-            width: 22px;
-            height: 22px;
-            margin-right: 7px;
-            flex-shrink: 0;
-            background-size: cover;
-            background-image: url('../../../assets/svg/angular-xo-white.svg');
-          }
+		  &.link-icon {
+            &.angular-xo-icon-solid {
+              &:before {
+                content: '';
+                width: 22px;
+                height: 22px;
+                margin-right: 7px;
+                flex-shrink: 0;
+                background-size: cover;
+                background-image: url('../../../assets/svg/angular-xo-white.svg');
+              }
+            }
+		  }
 
-          .github-icon-white {
-            width: 24px;
-            height: 24px;
-            margin-right: 7px;
-            flex-shrink: 0;
-            background-size: cover;
-            background-image: url('../../../assets/svg/github-white.svg');
+          &.github-icon-white {
+            &:before {
+              content: '';
+              width: 24px;
+              height: 24px;
+              margin-right: 7px;
+              flex-shrink: 0;
+              background-size: cover;
+              background-image: url('../../../assets/svg/github-white.svg');
+            }
           }
         }
 

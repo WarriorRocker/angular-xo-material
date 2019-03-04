@@ -1,16 +1,17 @@
 <nav mat-tab-nav-bar>
-  <a mat-tab-link [active]="rla.isActive"
-     routerLink="/" routerLinkActive #rla="routerLinkActive"
-     [routerLinkActiveOptions]="{exact: true}">
-    <span class="angular-xo-icon-solid"></span>
-    {{appConfig.app.title}}
-  </a>
-  <a *ngFor="let item of navItems" mat-tab-link [active]="rla.isActive"
-     [routerLink]="item.url" routerLinkActive #rla="routerLinkActive"
+  <div class="link" *ngFor="let item of navItemsLeft" [ngSwitch]="item.target">
+    <a *ngSwitchDefault mat-tab-link [ngClass]="item.classes"
+  	 [routerLink]="item.url" [active]="rla.isActive" routerLinkActive #rla="routerLinkActive"
      [routerLinkActiveOptions]="{exact: item.meta && item.meta.xo_menu_item_router_exact}">{{item.title}}</a>
+    <a *ngSwitchCase="'_blank'" mat-tab-link [ngClass]="item.classes"
+  	 [href]="item.url" [target]="item.target">{{item.title}}</a>
+  </div>
   <div class="spacer"></div>
-  <a mat-tab-link href="https://github.com" target="_blank">
-    <span class="github-icon-white"></span>
-    GitHub
-  </a>
+  <div class="link" *ngFor="let item of navItemsRight" [ngSwitch]="item.target">
+    <a *ngSwitchDefault mat-tab-link [ngClass]="item.classes"
+  	 [routerLink]="item.url" [active]="rla.isActive" routerLinkActive #rla="routerLinkActive"
+     [routerLinkActiveOptions]="{exact: item.meta && item.meta.xo_menu_item_router_exact}">{{item.title}}</a>
+    <a *ngSwitchCase="'_blank'" mat-tab-link [ngClass]="item.classes"
+  	 [href]="item.url" [target]="item.target">{{item.title}}</a>
+  </div>
 </nav>
