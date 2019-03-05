@@ -6,7 +6,5 @@
       <mat-icon>file_copy</mat-icon>
     </button>
   </div>
-  <!--<pre><code highlight [textContent]="section.content" [language]="section.languages ? [section.languages] : null"></code></pre>-->
-  <!--<pre><code [textContent]="section.content"></code></pre>-->
   <ngx-codemirror [(ngModel)]="section.content" [options]="{readOnly: true, mode: section.mode}"></ngx-codemirror>
 </div>
