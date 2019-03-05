@@ -1,14 +1,7 @@
-<div class="footer" *ngIf="footer && footer.xo_footer_enabled">
+<div class="footer" *ngIf="footer && footer.xo_footer_sections">
   <div class="footer-inner">
-    <div class="footer-item footer-logo">
-      <div class="angular-xo-logo-white"></div>
-      <a class="footer-link" href="https://github.com" target="_blank">Contribute to Xo</a>
-    </div>
-    <div class="footer-item footer-version">
-      <p>Current Version: {{appConfig.app.version}}</p>
-    </div>
-    <div class="footer-item footer-legal">
-      <div class="footer-inner-legal" [innerHtml]="footer.xo_footer_legal"></div>
-    </div>
+    <div class="footer-section" *ngFor="let section of footer.xo_footer_sections" [ngClass]="section.section_align">
+      <div class="footer-section-content" [ngClass]="section.content_align" [innerHtml]="section.content"></div>
+	</div>
   </div>
 </div>

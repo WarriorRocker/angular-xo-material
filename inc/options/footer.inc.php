@@ -7,22 +7,49 @@ add_action('acf/init', function() {
 		'menu_order' => 10,
 		'fields' => array(
 			array(
-				'key' => 'xo_footer_enabled',
-				'label' => 'Enabled',
-				'name' => 'xo_footer_enabled',
-				'type' => 'true_false'
-			),
-			array(
-				'key' => 'xo_footer_logo',
-				'label' => 'Logo Area',
-				'name' => 'xo_footer_logo',
-				'type' => 'wysiwyg'
-			),
-			array(
-				'key' => 'xo_footer_legal',
-				'label' => 'Legal Area',
-				'name' => 'xo_footer_legal',
-				'type' => 'wysiwyg'
+				'key' => 'xo_footer_sections',
+				'label' => 'Sections',
+				'name' => 'xo_footer_sections',
+				'type' => 'repeater',
+				'layout' => 'block',
+				'sub_fields' => array(
+					array(
+						'key' => 'xo_footer_sections_section_align',
+						'label' => 'Section Align',
+						'name' => 'section_align',
+						'type' => 'select',
+						'choices' => array(
+							'' => 'Default',
+							'justify-center' => 'Center',
+							'justify-left' => 'Left',
+							'justify-right' => 'Right'
+						),
+						'wrapper' => array(
+							'width' => 25
+						)
+					),
+					array(
+						'key' => 'xo_footer_sections_content_align',
+						'label' => 'Content Align',
+						'name' => 'content_align',
+						'type' => 'select',
+						'choices' => array(
+							'' => 'Default',
+							'align-center' => 'Center',
+							'align-left' => 'Left',
+							'align-right' => 'Right'
+						),
+						'wrapper' => array(
+							'width' => 25
+						)
+					),
+					array(
+						'key' => 'xo_footer_sections_content',
+						'label' => 'Content',
+						'name' => 'content',
+						'type' => 'textarea'
+					)
+				)
 			)
 		),
 		'location' => array(
@@ -30,7 +57,7 @@ add_action('acf/init', function() {
 				array(
 					'param' => 'options_page',
 					'operator' => '==',
-					'value' => 'theme-options',
+					'value' => 'theme-options'
 				)
 			)
 		)

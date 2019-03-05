@@ -15,49 +15,62 @@
         flex-direction: column;
       }
 
-      .footer-item {
+      .footer-section {
         flex: 1;
         color: #FFFFFF;
         font-size: 12px;
+        display: flex;
 
-        ::ng-deep {
-          a {
-            color: #FFFFFF;
-          }
+        &.justify-center {
+          justify-content: center;
         }
 
-        &.footer-logo {
-          display: flex;
-          align-items: center;
-
-          .angular-xo-logo-white {
-            margin-right: 20px;
-            width: 50px;
-            height: 50px;
-            background-image: url('../../../assets/svg/angular-xo-white.svg');
-          }
-
-          .footer-link {
-            font-size: 20px;
-            text-decoration: none;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
+        &.justify-left {
+          justify-content: flex-start;
         }
 
-        &.footer-version {
-          text-align: center;
+        &.justify-right {
+          justify-content: flex-end;
         }
 
-        &.footer-legal {
-          min-width: 225px;
-          text-align: right;
+        .footer-section-content {
+          display: inline-block;
 
-          .footer-inner-legal {
-            display: inline-block;
+          &.align-center {
             text-align: center;
+          }
+	   
+          &.align-left {
+            text-align: left;
+          }
+	   
+          &.align-right {
+            text-align: right;
+          }
+
+          ::ng-deep {
+            a {
+              color: #FFFFFF;
+            }
+	 
+            .angular-xo-logo-white {
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 20px;
+              width: 50px;
+              height: 50px;
+              background-image: url('../../../assets/svg/angular-xo-white.svg');
+            }
+	 
+	   	    .large-link {
+              vertical-align: middle;
+              font-size: 20px;
+              text-decoration: none;
+	    
+              &:hover {
+                text-decoration: underline;
+              }
+            }
           }
         }
       }
