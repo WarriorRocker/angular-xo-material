@@ -6,5 +6,5 @@
       <mat-icon>file_copy</mat-icon>
     </button>
   </div>
-  <ngx-codemirror [(ngModel)]="section.content" [options]="{readOnly: true, mode: section.mode}"></ngx-codemirror>
+  <ngx-codemirror [(ngModel)]="section.content" [options]="editorConfiguration"></ngx-codemirror>
 </div>
