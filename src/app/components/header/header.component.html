@@ -4,7 +4,7 @@
   	 [routerLink]="item.url" [active]="rla.isActive" routerLinkActive #rla="routerLinkActive"
      [routerLinkActiveOptions]="{exact: item.meta && item.meta.xo_menu_item_router_exact}">{{item.title}}</a>
     <a *ngSwitchCase="'_blank'" mat-tab-link [ngClass]="item.classes"
-  	 [href]="item.url" [target]="item.target">{{item.title}}</a>
+  	 [href]="item.url" [target]="item.target" rel="noopener">{{item.title}}</a>
   </div>
   <div class="spacer"></div>
   <div class="link" *ngFor="let item of navItemsRight" [ngSwitch]="item.target">
@@ -12,6 +12,6 @@
   	 [routerLink]="item.url" [active]="rla.isActive" routerLinkActive #rla="routerLinkActive"
      [routerLinkActiveOptions]="{exact: item.meta && item.meta.xo_menu_item_router_exact}">{{item.title}}</a>
     <a *ngSwitchCase="'_blank'" mat-tab-link [ngClass]="item.classes"
-  	 [href]="item.url" [target]="item.target">{{item.title}}</a>
+  	 [href]="item.url" [target]="item.target" rel="noopener">{{item.title}}</a>
   </div>
 </nav>
