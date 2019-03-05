@@ -3,8 +3,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import 'hammerjs';
 
-//import hljs from 'highlight.js';
-
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/htmlembedded/htmlembedded';
+import 'codemirror/mode/php/php';
+import 'codemirror/mode/shell/shell';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';

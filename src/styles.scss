@@ -4,7 +4,8 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 @import '~@angular/material/theming';
-//@import '~highlight.js/styles/vs.css';
+
+@import '~codemirror/lib/codemirror.css';
 
 @import 'app/shared/_variables.scss';
 

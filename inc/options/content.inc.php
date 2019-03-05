@@ -88,12 +88,19 @@ add_action('acf/init', function() {
 								)
 							),
 							array(
-								'key' => 'xo_content_sections_code_languages',
-								'label' => 'Language',
-								'name' => 'languages',
-								'type' => 'text',
+								'key' => 'xo_content_sections_code_mode',
+								'label' => 'Mode',
+								'name' => 'mode',
+								'type' => 'select',
 								'wrapper' => array(
 									'width' => '25'
+								),
+								'choices' => array(
+									'text/javascript' => 'JavasScript',
+									'application/typescript' => 'TypeScript',
+									'application/x-ejs' => 'HTML',
+									'application/x-httpd-php' => 'PHP',
+									'application/x-sh' => 'Shell'
 								)
 							),
 							array(
