@@ -15,7 +15,6 @@ import { XoMaterialContentPageComponent } from './content.component';
 import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadcrumbs.module';
 import { XoMaterialSectionsModule } from '../../components/sections/sections.module';
 import { XoMaterialContentsModule } from '../../components/contents/contents.module';
-import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.module';
 
 @NgModule({
   imports: [
@@ -23,7 +22,6 @@ import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.
     XoMaterialBreadcrumbsModule,
     XoMaterialSectionsModule,
     XoMaterialContentsModule,
-    XoMaterialBackToTopModule,
     RouterModule.forChild([
       {
         path: '',
