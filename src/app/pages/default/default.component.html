@@ -1,6 +1,10 @@
 <div class="content">
+  <xo-material-breadcrumbs [breadcrumbs]="post.breadcrumbs"></xo-material-breadcrumbs>
   <div class="content-inner">
-    <h1>{{post.title}}</h1>
-    <div class="content-wrap" [innerHtml]="post.content"></div>
+    <div class="content-wrap">
+      <h1>{{post.title}}</h1>
+      <section [innerHtml]="post.content"></section>
+	</div>
+    <xo-material-back-to-top container="main"></xo-material-back-to-top>
   </div>
 </div>

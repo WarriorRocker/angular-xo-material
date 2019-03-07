@@ -2,4 +2,14 @@
 
 :host {
   @include page-container();
+
+  .content {
+    .content-inner {
+      padding-bottom: 0;
+
+      .content-wrap {
+        padding-bottom: 60px;
+      }
+    }
+  }
 }
