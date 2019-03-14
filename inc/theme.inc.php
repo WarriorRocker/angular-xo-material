@@ -7,7 +7,7 @@ add_action('init', function() {
 		'header_left' => __('Header Left'),
 		'header_right' => __('Header Right')
 	));
-});
+}, 10, 0);
 
 add_action('init', function() {
 	remove_action('wp_head', '_wp_render_title_tag', 1);
@@ -39,7 +39,7 @@ add_action('init', function() {
 	remove_filter('the_content_feed', 'wp_staticize_emoji');
 	remove_filter('comment_text_rss', 'wp_staticize_emoji');
 
-	add_filter('show_admin_bar', '__return_false');
+	add_filter('show_admin_bar', '__return_false', 1);
 
 	add_filter('tiny_mce_plugins', function($plugins) {
 		if (is_array($plugins))
@@ -52,4 +52,23 @@ add_action('init', function() {
 add_action('wp_enqueue_scripts', function() {
 	wp_deregister_style('dashicons');
 	wp_deregister_script('wp-embed');
-});
+}, 10, 0);
+
+add_action('init', function() {
+	register_post_type('blog', array(
+		'labels' => array(
+			'name' => __('Blog'),
+			'singular_name' => __('Blog')
+		),
+		'public' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'supports' => array(
+			'title', 'revisions', 'page-attributes'
+		),
+		'menu_icon' => 'dashicons-admin-post',
+		'rewrite' => array(
+			'slug' => 'blog',
+		)
+	));
+}, 10, 0);
