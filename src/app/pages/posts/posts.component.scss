@@ -1,0 +1,5 @@
+@import '../../shared/_pages.scss';
+
+:host {
+	@include page-container();
+}
