@@ -1,7 +1,9 @@
 <div class="content">
   <xo-material-breadcrumbs [breadcrumbs]="post.breadcrumbs"></xo-material-breadcrumbs>
   <div class="content-inner">
-    <div *ngIf="post.fields.sections.length" xo-material-sections [sections]="post.fields.sections"></div>
+    <div class="content-wrap">
+      <div *ngIf="post.fields.sections.length" xo-material-sections [sections]="post.fields.sections"></div>
+    </div>
     <xo-material-contents container="main"></xo-material-contents>
   </div>
 </div>
