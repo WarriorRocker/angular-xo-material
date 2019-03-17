@@ -1,8 +1,9 @@
 <div class="section" *ngFor="let section of sections" [ngSwitch]="section.acf_fc_layout">
-  <xo-material-sections-heading *ngSwitchCase="'heading'" [section]="section"></xo-material-sections-heading>
-  <xo-material-sections-content *ngSwitchCase="'content'" [section]="section"></xo-material-sections-content>
-  <xo-material-sections-code *ngSwitchCase="'code'" [section]="section"></xo-material-sections-code>
-  <xo-material-sections-spacer *ngSwitchCase="'spacer'" [section]="section"></xo-material-sections-spacer>
-  <xo-material-sections-nav-list *ngSwitchCase="'nav-list'" [section]="section"></xo-material-sections-nav-list>
-  <xo-material-sections-table *ngSwitchCase="'table'" [section]="section"></xo-material-sections-table>
+	<xo-material-sections-heading *ngSwitchCase="'heading'" [section]="section"></xo-material-sections-heading>
+	<xo-material-sections-content *ngSwitchCase="'content'" [section]="section"></xo-material-sections-content>
+	<xo-material-sections-code *ngSwitchCase="'code'" [section]="section"></xo-material-sections-code>
+	<xo-material-sections-spacer *ngSwitchCase="'spacer'" [section]="section"></xo-material-sections-spacer>
+	<xo-material-sections-nav-list *ngSwitchCase="'nav-list'" [section]="section"></xo-material-sections-nav-list>
+	<xo-material-sections-table *ngSwitchCase="'table'" [section]="section"></xo-material-sections-table>
+	<xo-material-sections-image *ngSwitchCase="'image'" [section]="section"></xo-material-sections-image>
 </div>

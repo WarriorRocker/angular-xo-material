@@ -127,6 +127,20 @@ add_action('acf/init', function() {
 						)
 					),
 					array(
+						'key' => 'xo_content_sections_image',
+						'label' => 'Image',
+						'name' => 'image',
+						'display' => 'block',
+						'sub_fields' => array(
+							array(
+								'key' => 'xo_content_sections_image_image',
+								'label' => 'Image',
+								'name' => 'image',
+								'type' => 'image'
+							)
+						)
+					),
+					array(
 						'key' => 'xo_content_sections_navlist',
 						'label' => 'Nav List',
 						'name' => 'nav-list',

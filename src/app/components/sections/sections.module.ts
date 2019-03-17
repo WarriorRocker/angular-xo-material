@@ -7,20 +7,22 @@ import { XoMaterialCodeSectionModule } from './parts/code/code.module';
 import { XoMaterialTableSectionModule } from './parts/table/table.module';
 import { XoMaterialNavListSectionModule } from './parts/navList/navList.module';
 import { XoMaterialSpacerSectionModule } from './parts/spacer/spacer.module';
+import { XoMaterialImageSectionModule } from './parts/image/image.module';
 
 import { XoMaterialSectionsComponent } from './sections.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    XoMaterialHeadingSectionModule,
-    XoMaterialContentSectionModule,
-    XoMaterialCodeSectionModule,
-    XoMaterialTableSectionModule,
-    XoMaterialNavListSectionModule,
-    XoMaterialSpacerSectionModule
-  ],
-  declarations: [XoMaterialSectionsComponent],
-  exports: [XoMaterialSectionsComponent]
+	imports: [
+		CommonModule,
+		XoMaterialHeadingSectionModule,
+		XoMaterialContentSectionModule,
+		XoMaterialCodeSectionModule,
+		XoMaterialTableSectionModule,
+		XoMaterialNavListSectionModule,
+		XoMaterialSpacerSectionModule,
+		XoMaterialImageSectionModule
+	],
+	declarations: [XoMaterialSectionsComponent],
+	exports: [XoMaterialSectionsComponent]
 })
 export class XoMaterialSectionsModule { }

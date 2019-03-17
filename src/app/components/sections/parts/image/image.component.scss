@@ -1,0 +1,13 @@
+@import '../../../../shared/_variables.scss';
+
+:host {
+	.image {
+		font-size: 0;
+
+		a {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
