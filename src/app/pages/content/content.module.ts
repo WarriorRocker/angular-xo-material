@@ -17,21 +17,21 @@ import { XoMaterialSectionsModule } from '../../components/sections/sections.mod
 import { XoMaterialContentsModule } from '../../components/contents/contents.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    XoMaterialBreadcrumbsModule,
-    XoMaterialSectionsModule,
-    XoMaterialContentsModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: XoMaterialContentPageComponent,
-        resolve: {
-          post: XoPostResolver
-        }
-      }
-    ])
-  ],
-  declarations: [XoMaterialContentPageComponent]
+	imports: [
+		CommonModule,
+		XoMaterialBreadcrumbsModule,
+		XoMaterialSectionsModule,
+		XoMaterialContentsModule,
+		RouterModule.forChild([
+			{
+				path: '',
+				component: XoMaterialContentPageComponent,
+				resolve: {
+					post: XoPostResolver
+				}
+			}
+		])
+	],
+	declarations: [XoMaterialContentPageComponent]
 })
 export class XoMaterialContentPageModule { }
