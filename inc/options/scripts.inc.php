@@ -23,22 +23,6 @@ add_action('acf/init', function() {
 				)
 			),
 			array(
-				'key' => 'xo_scripts_body',
-				'label' => 'Body',
-				'name' => 'xo_scripts_body',
-				'type' => 'repeater',
-				'layout' => 'block',
-				'button_label' => 'Add Body Content',
-				'sub_fields' => array(
-					array(
-						'key' => 'xo_scripts_body_content',
-						'label' => 'Content',
-						'name' => 'content',
-						'type' => 'textarea'
-					)
-				)
-			),
-			array(
 				'key' => 'xo_scripts_footer',
 				'label' => 'Footer',
 				'name' => 'xo_scripts_footer',
@@ -71,30 +55,27 @@ class XoMaterialScripts
 {
 	function __construct() {
 		add_action('wp_head', array($this, 'RenderWpHead'), 10, 0);
-		add_action('wp_body', array($this, 'RenderWpBody'), 10, 0);
 		add_action('wp_footer', array($this, 'RenderWpFooter'), 10, 0);
 	}
 
 	public function RenderWpHead() {
-		$this->RenderContents(get_field('xo_scripts_head', 'option'));
-	}
-
-	public function RenderWpBody() {
-		$this->RenderContents(get_field('xo_scripts_body', 'option'));
+		$this->RenderFieldContents('xo_scripts_head');
 	}
 
 	public function RenderWpFooter() {
-		$this->RenderContents(get_field('xo_scripts_footer', 'option'));
+		$this->RenderFieldContents('xo_scripts_footer');
 	}
 
-	private function RenderContents($contents) {
+	private function RenderFieldContents($field) {
+		$contents = get_field($field, 'option');
+
 		if ((empty($contents)) || (!is_array($contents)))
 			return;
 
-		foreach ($contents as $content) {
-			if (!empty($content['content']))
-				echo $content['content'];
-		}
+		$output = array_column($contents, 'content');
+
+		if ($output)
+			echo implode("\n", $output);
 	}
 }
 new XoMaterialScripts();

@@ -4,7 +4,7 @@ add_action('acf/init', function() {
 	acf_add_local_field_group(array(
 		'key' => 'xo_content',
 		'title' => 'Content',
-		'menu_order' => 10,
+		'menu_order' => 20,
 		'fields' => array(
 			array(
 				'key' => 'xo_content_sections',
