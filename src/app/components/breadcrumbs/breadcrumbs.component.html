@@ -1,16 +1,16 @@
 <nav class="breadcrumbs">
-  <div class="breadcrumbs-inner">
-    <span class="breadcrumb">
-      <a class="breadcrumb-link breadcrumb-icon" routerLink="/">
-        <mat-icon>home</mat-icon>
-      </a>
-    </span>
-    <span class="breadcrumb" *ngFor="let crumb of breadcrumbs; let last = last">
-      <span class="breadcrumb-sep">
-        <mat-icon>chevron_right</mat-icon>
-      </span>
-      <a class="breadcrumb-link" *ngIf="!last" [routerLink]="crumb.url">{{crumb.title}}</a>
-      <span class="breadcrumb-link" *ngIf="last">{{crumb.title}}</span>
-    </span>
-  </div>
+	<div class="breadcrumbs-inner">
+		<span class="breadcrumb">
+			<a class="breadcrumb-link breadcrumb-icon" routerLink="/">
+				<mat-icon>home</mat-icon>
+			</a>
+		</span>
+		<span class="breadcrumb" *ngFor="let crumb of breadcrumbs; let last = last">
+			<span class="breadcrumb-sep">
+				<mat-icon>chevron_right</mat-icon>
+			</span>
+			<a class="breadcrumb-link" *ngIf="!last" [routerLink]="crumb.url">{{crumb.title}}</a>
+			<span class="breadcrumb-link" *ngIf="last">{{crumb.title}}</span>
+		</span>
+	</div>
 </nav>

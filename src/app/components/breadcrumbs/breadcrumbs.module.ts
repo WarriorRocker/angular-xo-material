@@ -7,13 +7,13 @@ import { MatIconModule, MatButtonModule } from '@angular/material';
 import { XoMaterialBreadcrumbsComponent } from './breadcrumbs.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatButtonModule
-  ],
-  declarations: [XoMaterialBreadcrumbsComponent],
-  exports: [XoMaterialBreadcrumbsComponent]
+	imports: [
+		CommonModule,
+		RouterModule,
+		MatIconModule,
+		MatButtonModule
+	],
+	declarations: [XoMaterialBreadcrumbsComponent],
+	exports: [XoMaterialBreadcrumbsComponent]
 })
 export class XoMaterialBreadcrumbsModule { }

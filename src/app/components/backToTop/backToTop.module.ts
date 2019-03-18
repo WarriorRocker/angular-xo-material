@@ -6,12 +6,12 @@ import { MatIconModule, MatButtonModule } from '@angular/material';
 import { XoMaterialBackToTopComponent } from './backToTop.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatButtonModule
-  ],
-  declarations: [XoMaterialBackToTopComponent],
-  exports: [XoMaterialBackToTopComponent]
+	imports: [
+		CommonModule,
+		MatIconModule,
+		MatButtonModule
+	],
+	declarations: [XoMaterialBackToTopComponent],
+	exports: [XoMaterialBackToTopComponent]
 })
 export class XoMaterialBackToTopModule { }

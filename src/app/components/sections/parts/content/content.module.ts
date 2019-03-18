@@ -5,11 +5,11 @@ import { RouterModule } from '@angular/router';
 import { XoMaterialContentSectionComponent } from './content.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  declarations: [XoMaterialContentSectionComponent],
-  exports: [XoMaterialContentSectionComponent]
+	imports: [
+		CommonModule,
+		RouterModule
+	],
+	declarations: [XoMaterialContentSectionComponent],
+	exports: [XoMaterialContentSectionComponent]
 })
 export class XoMaterialContentSectionModule { }

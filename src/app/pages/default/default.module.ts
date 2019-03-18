@@ -14,19 +14,19 @@ import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadc
 import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.module';
 
 @NgModule({
-  imports: [
-    XoMaterialBreadcrumbsModule,
-    XoMaterialBackToTopModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: XoMaterialDefaultPageComponent,
-        resolve: {
-          post: XoPostResolver
-        }
-      }
-    ])
-  ],
-  declarations: [XoMaterialDefaultPageComponent]
+	imports: [
+		XoMaterialBreadcrumbsModule,
+		XoMaterialBackToTopModule,
+		RouterModule.forChild([
+			{
+				path: '',
+				component: XoMaterialDefaultPageComponent,
+				resolve: {
+					post: XoPostResolver
+				}
+			}
+		])
+	],
+	declarations: [XoMaterialDefaultPageComponent]
 })
 export class XoMaterialDefaultPageModule { }

@@ -2,78 +2,78 @@
 @import '../../shared/_variables.scss';
 
 :host {
-  .footer {
-    padding: 24px;
-    background-color: $color-primary;
+	.footer {
+		padding: 24px;
+		background-color: $color-primary;
 
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      flex-flow: row wrap;
+		.footer-inner {
+			display: flex;
+			align-items: center;
+			flex-flow: row wrap;
 
-      @media($mat-small) {
-        flex-direction: column;
-      }
+			@media($mat-small) {
+				flex-direction: column;
+			}
 
-      .footer-section {
-        flex: 1;
-        color: #FFFFFF;
-        font-size: 12px;
-        display: flex;
+			.footer-section {
+				flex: 1;
+				color: #FFFFFF;
+				font-size: 12px;
+				display: flex;
 
-        &.justify-center {
-          justify-content: center;
-        }
+				&.justify-center {
+					justify-content: center;
+				}
 
-        &.justify-left {
-          justify-content: flex-start;
-        }
+				&.justify-left {
+					justify-content: flex-start;
+				}
 
-        &.justify-right {
-          justify-content: flex-end;
-        }
+				&.justify-right {
+					justify-content: flex-end;
+				}
 
-        .footer-section-content {
-          display: inline-block;
+				.footer-section-content {
+					display: inline-block;
 
-          &.align-center {
-            text-align: center;
-          }
-	   
-          &.align-left {
-            text-align: left;
-          }
-	   
-          &.align-right {
-            text-align: right;
-          }
+					&.align-center {
+						text-align: center;
+					}
 
-          ::ng-deep {
-            a {
-              color: #FFFFFF;
-            }
-	 
-            .angular-xo-logo-white {
-              display: inline-block;
-              vertical-align: middle;
-              margin-right: 20px;
-              width: 50px;
-              height: 50px;
-              background-image: url('../../../assets/svg/angular-xo-white.svg');
-            }
-	 
-	   	    .large-link {
-              vertical-align: middle;
-              font-size: 20px;
-              text-decoration: none;
-	    
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+					&.align-left {
+						text-align: left;
+					}
+
+					&.align-right {
+						text-align: right;
+					}
+
+					::ng-deep {
+						a {
+							color: #FFFFFF;
+						}
+
+						.angular-xo-logo-white {
+							display: inline-block;
+							vertical-align: middle;
+							margin-right: 20px;
+							width: 50px;
+							height: 50px;
+							background-image: url('../../../assets/svg/angular-xo-white.svg');
+						}
+
+						.large-link {
+							vertical-align: middle;
+							font-size: 20px;
+							text-decoration: none;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

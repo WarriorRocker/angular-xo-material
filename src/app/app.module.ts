@@ -11,25 +11,25 @@ import { XoMaterialHeaderModule } from './components/header/header.module';
 import { XoMaterialFooterModule } from './components/footer/footer.module';
 
 @NgModule({
-  declarations: [
-    XoMaterialAppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    XoModule,
-    RouterModule.forRoot(XoMaterialAppLazyRoutes),
-    XoMaterialHeaderModule,
-	XoMaterialFooterModule
-  ],
-  providers: [
-    {
-      'provide': APP_INITIALIZER,
-      'useFactory': XoInitRoutes,
-      'deps': [XoRouteService],
-      'multi': true
-    }
-  ],
-  bootstrap: [XoMaterialAppComponent]
+	declarations: [
+		XoMaterialAppComponent
+	],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		XoModule,
+		RouterModule.forRoot(XoMaterialAppLazyRoutes),
+		XoMaterialHeaderModule,
+		XoMaterialFooterModule
+	],
+	providers: [
+		{
+			'provide': APP_INITIALIZER,
+			'useFactory': XoInitRoutes,
+			'deps': [XoRouteService],
+			'multi': true
+		}
+	],
+	bootstrap: [XoMaterialAppComponent]
 })
 export class AppModule { }

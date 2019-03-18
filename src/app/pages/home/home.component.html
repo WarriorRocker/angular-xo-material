@@ -1,28 +1,28 @@
 <div class="content">
-  <div class="header" *ngIf="post.fields.header">
-    <div class="header-inner">
-      <h1>{{post.fields.header.h1}}</h1>
-      <h2>{{post.fields.header.h2}}</h2>
-      <div class="header-buttons" *ngIf="post.fields.header.buttons">
-        <a *ngFor="let button of post.fields.header.buttons"
-           mat-button [routerLink]="button.href">{{button.title}}</a>
-      </div>
-    </div>
-  </div>
-  <div class="feature">
-    <div class="feature-inner">
-      <a class="feature-logo angular-logo" href="https://angular.io" target="_blank" rel="noopener"></a>
-      <div class="feature-sep">
-        <mat-icon>chevron_right</mat-icon>
-      </div>
-      <div class="feature-logo angular-xo-logo"></div>
-      <div class="feature-sep">
-        <mat-icon>chevron_left</mat-icon>
-      </div>
-      <a class="feature-logo wordpress-logo" href="https://wordpress.org/" target="_blank" rel="noopener"></a>
-    </div>
-    </div>
-  <div class="content-inner">
-    <div *ngIf="post.fields.sections.length" xo-material-sections [sections]="post.fields.sections"></div>
-  </div>
+	<div class="header" *ngIf="post.fields.header">
+		<div class="header-inner">
+			<h1>{{post.fields.header.h1}}</h1>
+			<h2>{{post.fields.header.h2}}</h2>
+			<div class="header-buttons" *ngIf="post.fields.header.buttons">
+				<a *ngFor="let button of post.fields.header.buttons"
+				   mat-button [routerLink]="button.href">{{button.title}}</a>
+			</div>
+		</div>
+	</div>
+	<div class="feature">
+		<div class="feature-inner">
+			<a class="feature-logo angular-logo" href="https://angular.io" target="_blank" rel="noopener"></a>
+			<div class="feature-sep">
+				<mat-icon>chevron_right</mat-icon>
+			</div>
+			<div class="feature-logo angular-xo-logo"></div>
+			<div class="feature-sep">
+				<mat-icon>chevron_left</mat-icon>
+			</div>
+			<a class="feature-logo wordpress-logo" href="https://wordpress.org/" target="_blank" rel="noopener"></a>
+		</div>
+	</div>
+	<div class="content-inner">
+		<div *ngIf="post.fields.sections.length" xo-material-sections [sections]="post.fields.sections"></div>
+	</div>
 </div>

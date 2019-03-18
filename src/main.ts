@@ -11,11 +11,9 @@ import 'codemirror/mode/shell/shell';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-//window['hljs'] = hljs;
-
 if (environment.production) {
-  enableProdMode();
+	enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+	.catch(err => console.log(err));

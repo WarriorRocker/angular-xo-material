@@ -8,15 +8,15 @@ import { XoMaterialHeadingSectionComponent } from './heading.component';
 import { XoMaterialHeadingSectionLinkComponent } from './parts/headingLink.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule
-  ],
-  declarations: [
-    XoMaterialHeadingSectionComponent,
-    XoMaterialHeadingSectionLinkComponent
-  ],
-  exports: [XoMaterialHeadingSectionComponent]
+	imports: [
+		CommonModule,
+		RouterModule,
+		MatIconModule
+	],
+	declarations: [
+		XoMaterialHeadingSectionComponent,
+		XoMaterialHeadingSectionLinkComponent
+	],
+	exports: [XoMaterialHeadingSectionComponent]
 })
 export class XoMaterialHeadingSectionModule { }

@@ -1,13 +1,17 @@
-.spacer {
-  &.small {
-    height: 15px;
-  }
+@import '../../../../shared/_variables.scss';
 
-  &.medium {
-    height: 30px;
-  }
+:host {
+	.spacer {
+		&.small {
+			height: 15px;
+		}
 
-  &.large {
-    height: 45px;
-  }
+		&.medium {
+			height: 30px;
+		}
+
+		&.large {
+			height: 45px;
+		}
+	}
 }

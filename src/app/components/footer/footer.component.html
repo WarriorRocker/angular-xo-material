@@ -1,7 +1,7 @@
 <div class="footer" *ngIf="footer && footer.xo_footer_sections">
-  <div class="footer-inner">
-    <div class="footer-section" *ngFor="let section of footer.xo_footer_sections" [ngClass]="section.section_align">
-      <div class="footer-section-content" [ngClass]="section.content_align" [innerHtml]="section.content"></div>
+	<div class="footer-inner">
+		<div class="footer-section" *ngFor="let section of footer.xo_footer_sections" [ngClass]="section.section_align">
+			<div class="footer-section-content" [ngClass]="section.content_align" [innerHtml]="section.content"></div>
+		</div>
 	</div>
-  </div>
 </div>

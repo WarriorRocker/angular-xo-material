@@ -1,53 +1,53 @@
 @import '../../../../shared/_variables.scss';
 
 .code {
-  border-radius: 5px;
-  margin: 16px auto;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.02);
+	border-radius: 5px;
+	margin: 16px auto;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.02);
 
-  .code-heading {
-    height: 30px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: flex-start;
+	.code-heading {
+		height: 30px;
+		margin-bottom: 10px;
+		display: flex;
+		align-items: flex-start;
 
-    .code-sep {
-      flex: 1;
-    }
+		.code-sep {
+			flex: 1;
+		}
 
-    .code-title {
-      display: inline-block;
-      padding-right: 20px;
-      color: $color-accent;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    }
+		.code-title {
+			display: inline-block;
+			padding-right: 20px;
+			color: $color-accent;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+		}
 
-    .code-copy {
-      visibility: hidden;
-      min-width: initial;
-      padding: 0 6px;
+		.code-copy {
+			visibility: hidden;
+			min-width: initial;
+			padding: 0 6px;
 
-      ::ng-deep {
-        .mat-icon {
-          color: $color-primary;
-        }
-      }
-    }
-  }
+			::ng-deep {
+				.mat-icon {
+					color: $color-primary;
+				}
+			}
+		}
+	}
 
-  ::ng-deep {
-    .CodeMirror {
-	  background: transparent;
-      height: auto;
-    }
-  }
+	::ng-deep {
+		.CodeMirror {
+			background: transparent;
+			height: auto;
+		}
+	}
 
-  &:hover {
-    .code-heading {
-      .code-copy {
-        visibility: visible;
-      }
-    }
-  }
+	&:hover {
+		.code-heading {
+			.code-copy {
+				visibility: visible;
+			}
+		}
+	}
 }

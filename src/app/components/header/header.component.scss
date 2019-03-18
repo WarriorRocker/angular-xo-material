@@ -1,70 +1,70 @@
 @import '../../shared/_variables.scss';
 
 :host {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
 
-  ::ng-deep {
-    .mat-tab-nav-bar {
-      border: none;
+	::ng-deep {
+		.mat-tab-nav-bar {
+			border: none;
 
-      .mat-tab-links {
-        background-color: $color-primary;
+			.mat-tab-links {
+				background-color: $color-primary;
 
-        .mat-tab-link {
-          color: #FFFFFF;
-          opacity: .8;
-          min-width: unset;
-          transition: .2s ease;
-          height: 56px;
+				.mat-tab-link {
+					color: #FFFFFF;
+					opacity: .8;
+					min-width: unset;
+					transition: .2s ease;
+					height: 56px;
 
-          &.mat-tab-label-active {
-            opacity: 1;
-          }
+					&.mat-tab-label-active {
+						opacity: 1;
+					}
 
-          &:not(.mat-tab-label-active):hover {
-            background-color: rgba(0, 0, 0, 0.15);
-          }
+					&:not(.mat-tab-label-active):hover {
+						background-color: rgba(0, 0, 0, 0.15);
+					}
 
-		  &.link-icon {
-            &.angular-xo-icon-solid {
-              &:before {
-                content: '';
-                width: 22px;
-                height: 22px;
-                margin-right: 7px;
-                flex-shrink: 0;
-                background-size: cover;
-                background-image: url('../../../assets/svg/angular-xo-white.svg');
-              }
-            }
-		  }
+					&.link-icon {
+						&.angular-xo-icon-solid {
+							&:before {
+								content: '';
+								width: 22px;
+								height: 22px;
+								margin-right: 7px;
+								flex-shrink: 0;
+								background-size: cover;
+								background-image: url('../../../assets/svg/angular-xo-white.svg');
+							}
+						}
+					}
 
-          &.github-icon-white {
-            &:before {
-              content: '';
-              width: 24px;
-              height: 24px;
-              margin-right: 7px;
-              flex-shrink: 0;
-              background-size: cover;
-              background-image: url('../../../assets/svg/github-white.svg');
-            }
-          }
-        }
+					&.github-icon-white {
+						&:before {
+							content: '';
+							width: 24px;
+							height: 24px;
+							margin-right: 7px;
+							flex-shrink: 0;
+							background-size: cover;
+							background-image: url('../../../assets/svg/github-white.svg');
+						}
+					}
+				}
 
-        .mat-ink-bar {
-          height: 3px;
-          background-color: #FFFFFF;
-        }
+				.mat-ink-bar {
+					height: 3px;
+					background-color: #FFFFFF;
+				}
 
-        .spacer {
-          flex-grow: 1;
-        }
-      }
-    }
-  }
+				.spacer {
+					flex-grow: 1;
+				}
+			}
+		}
+	}
 }

@@ -1,18 +1,18 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 56px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 56px;
+	bottom: 0;
+	left: 0;
+	right: 0;
 
-  main {
-    overflow-y: auto;
-    background-color: #fafafa;
+	main {
+		overflow-y: auto;
+		background-color: #fafafa;
 
-	section {
-	  min-height: calc(100vh - 56px);
+		section {
+			min-height: calc(100vh - 56px);
+		}
 	}
-  }
 }

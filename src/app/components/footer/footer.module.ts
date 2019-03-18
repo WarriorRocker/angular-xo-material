@@ -5,11 +5,11 @@ import { RouterModule } from '@angular/router';
 import { XoMaterialFooterComponent } from './footer.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  declarations: [XoMaterialFooterComponent],
-  exports: [XoMaterialFooterComponent]
+	imports: [
+		CommonModule,
+		RouterModule
+	],
+	declarations: [XoMaterialFooterComponent],
+	exports: [XoMaterialFooterComponent]
 })
 export class XoMaterialFooterModule { }

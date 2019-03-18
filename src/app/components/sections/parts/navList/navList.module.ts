@@ -7,12 +7,12 @@ import { MatListModule } from '@angular/material';
 import { XoMaterialNavListSectionComponent } from './navList.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatListModule
-  ],
-  declarations: [XoMaterialNavListSectionComponent],
-  exports: [XoMaterialNavListSectionComponent]
+	imports: [
+		CommonModule,
+		RouterModule,
+		MatListModule
+	],
+	declarations: [XoMaterialNavListSectionComponent],
+	exports: [XoMaterialNavListSectionComponent]
 })
 export class XoMaterialNavListSectionModule { }

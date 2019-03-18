@@ -17,21 +17,21 @@ import { XoMaterialHomePageComponent } from './home.component';
 import { XoMaterialSectionsModule } from '../../components/sections/sections.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    XoMaterialSectionsModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: XoMaterialHomePageComponent,
-        resolve: {
-          post: XoPostResolver
-        }
-      }
-    ])
-  ],
-  declarations: [XoMaterialHomePageComponent]
+	imports: [
+		CommonModule,
+		MatButtonModule,
+		MatIconModule,
+		XoMaterialSectionsModule,
+		RouterModule.forChild([
+			{
+				path: '',
+				component: XoMaterialHomePageComponent,
+				resolve: {
+					post: XoPostResolver
+				}
+			}
+		])
+	],
+	declarations: [XoMaterialHomePageComponent]
 })
 export class XoMaterialHomePageModule { }

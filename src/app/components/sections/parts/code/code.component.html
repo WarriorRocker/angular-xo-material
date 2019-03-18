@@ -1,10 +1,10 @@
 <div class="code mat-elevation-z1">
-  <div class="code-heading">
-    <span class="code-title" *ngIf="section.title">{{section.title}}</span>
-    <div class="code-sep"></div>
-    <button mat-button class="code-copy" [clipboard]="section.content">
-      <mat-icon>file_copy</mat-icon>
-    </button>
-  </div>
-  <ngx-codemirror [(ngModel)]="section.content" [options]="editorConfiguration"></ngx-codemirror>
+	<div class="code-heading">
+		<span class="code-title" *ngIf="section.title">{{section.title}}</span>
+		<div class="code-sep"></div>
+		<button mat-button class="code-copy" [clipboard]="section.content">
+			<mat-icon>file_copy</mat-icon>
+		</button>
+	</div>
+	<ngx-codemirror [(ngModel)]="section.content" [options]="editorConfiguration"></ngx-codemirror>
 </div>

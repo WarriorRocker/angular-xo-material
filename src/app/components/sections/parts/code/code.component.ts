@@ -8,16 +8,16 @@ import { EditorConfiguration } from 'codemirror';
 	styleUrls: ['./code.component.scss']
 })
 export class XoMaterialCodeSectionComponent implements OnInit {
-  @Input() section: any;
+	@Input() section: any;
 
-  editorConfiguration: EditorConfiguration = {
-    viewportMargin: Infinity,
-    lineWrapping: true,
-    readOnly: true
-  };
+	editorConfiguration: EditorConfiguration = {
+		viewportMargin: Infinity,
+		lineWrapping: true,
+		readOnly: true
+	};
 
-  ngOnInit() {
-    if ((this.section != null) && (this.section.mode != null))
-      this.editorConfiguration.mode = this.section.mode
-  }
+	ngOnInit() {
+		if ((this.section != null) && (this.section.mode != null))
+			this.editorConfiguration.mode = this.section.mode
+	}
 }

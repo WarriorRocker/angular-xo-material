@@ -7,19 +7,19 @@ import { MatToolbarModule, MatIconModule, MatButtonModule, MatTableModule, MatTa
 import { XoMaterialHeaderComponent } from './header.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatTabsModule,
-  ],
-  declarations: [
-    XoMaterialHeaderComponent
-  ],
-  exports: [
-    XoMaterialHeaderComponent
-  ]
+	imports: [
+		CommonModule,
+		RouterModule,
+		MatIconModule,
+		MatButtonModule,
+		MatToolbarModule,
+		MatTabsModule,
+	],
+	declarations: [
+		XoMaterialHeaderComponent
+	],
+	exports: [
+		XoMaterialHeaderComponent
+	]
 })
 export class XoMaterialHeaderModule { }

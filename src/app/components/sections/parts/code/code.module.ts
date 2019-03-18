@@ -12,20 +12,20 @@ import { ClipboardService } from '../../../../directives/clipboard/clipboard.ser
 import { XoMaterialCodeSectionComponent } from './code.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatIconModule,
-    MatButtonModule,
-    CodemirrorModule
-  ],
-  providers: [
-    ClipboardService
-  ],
-  declarations: [
-    ClipboardDirective,
-    XoMaterialCodeSectionComponent
-  ],
-  exports: [XoMaterialCodeSectionComponent]
+	imports: [
+		CommonModule,
+		FormsModule,
+		MatIconModule,
+		MatButtonModule,
+		CodemirrorModule
+	],
+	providers: [
+		ClipboardService
+	],
+	declarations: [
+		ClipboardDirective,
+		XoMaterialCodeSectionComponent
+	],
+	exports: [XoMaterialCodeSectionComponent]
 })
 export class XoMaterialCodeSectionModule { }

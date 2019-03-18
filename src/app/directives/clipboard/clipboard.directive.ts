@@ -6,28 +6,28 @@ import { EventEmitter } from "@angular/core";
 import { ClipboardService } from "./clipboard.service";
 
 @Directive({
-  selector: "[clipboard]",
-  host: {
-    "(click)": "copyToClipboard()"
-  }
+	selector: "[clipboard]",
+	host: {
+		"(click)": "copyToClipboard()"
+	}
 })
 export class ClipboardDirective {
-  @Input() clipboard: string;
-  @Input() copyEvent: EventEmitter<string> = null;
-  @Input() errorEvent: EventEmitter<Error> = null;
+	@Input() clipboard: string;
+	@Input() copyEvent: EventEmitter<string> = null;
+	@Input() errorEvent: EventEmitter<Error> = null;
 
-  constructor(private _clipboard: ClipboardService) { }
+	constructor(private _clipboard: ClipboardService) { }
 
-  public copyToClipboard(): void {
-    this._clipboard
-      .copy(this.clipboard)
-      .then((value: string): void => {
-        if (this.copyEvent)
-          this.copyEvent.emit(value);
-      })
-      .catch((error: Error): void => {
-        if (this.errorEvent)
-          this.errorEvent.emit(error);
-      });
-  }
+	public copyToClipboard(): void {
+		this._clipboard
+			.copy(this.clipboard)
+			.then((value: string): void => {
+				if (this.copyEvent)
+					this.copyEvent.emit(value);
+			})
+			.catch((error: Error): void => {
+				if (this.errorEvent)
+					this.errorEvent.emit(error);
+			});
+	}
 }
