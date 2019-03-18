@@ -1,14 +1,14 @@
-//Modifed from: https://www.bennadel.com/blog/3235-creating-a-simple-copy-to-clipboard-directive-in-angular-2-4-9.htm
+// Modifed from: https://www.bennadel.com/blog/3235-creating-a-simple-copy-to-clipboard-directive-in-angular-2-4-9.htm
 
-import { Directive, Input } from "@angular/core";
-import { EventEmitter } from "@angular/core";
+import { Directive, Input } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
-import { ClipboardService } from "./clipboard.service";
+import { ClipboardService } from './clipboard.service';
 
 @Directive({
-	selector: "[clipboard]",
+	selector: '[clipboard]',
 	host: {
-		"(click)": "copyToClipboard()"
+		'(click)': 'copyToClipboard()'
 	}
 })
 export class ClipboardDirective {

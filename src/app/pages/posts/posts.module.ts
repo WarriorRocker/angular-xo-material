@@ -30,11 +30,6 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 				path: '',
 				component: XoMaterialPostsPageComponent,
 				children: [
-					//{
-					//	path: 'categories/:slug',
-					//	pathMatch: 'full',
-					//	component: XodusPostsPageCategoryComponent
-					//},
 					{
 						path: ':slug',
 						pathMatch: 'full',
@@ -49,8 +44,7 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 	],
 	declarations: [
 		XoMaterialPostsPageComponent,
-		XoMaterialPostsPagePostComponent,
-		//XoMaterialPostsPageCategoryComponent
+		XoMaterialPostsPagePostComponent
 	]
 })
 export class XoMaterialPostsPageModule { }

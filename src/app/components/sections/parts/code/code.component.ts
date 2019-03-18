@@ -18,6 +18,6 @@ export class XoMaterialCodeSectionComponent implements OnInit {
 
 	ngOnInit() {
 		if ((this.section != null) && (this.section.mode != null))
-			this.editorConfiguration.mode = this.section.mode
+			this.editorConfiguration.mode = this.section.mode;
 	}
 }

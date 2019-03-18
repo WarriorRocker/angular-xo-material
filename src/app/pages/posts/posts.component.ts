@@ -12,7 +12,6 @@ export class XoMaterialPostsPageComponent implements OnInit {
 	constructor(private _options: XoApiOptionsService) { }
 
 	ngOnInit() {
-		//this.getSidebar();
 	}
 
 	getSidebar() {

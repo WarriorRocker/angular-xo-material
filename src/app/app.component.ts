@@ -30,7 +30,7 @@ export class XoMaterialAppComponent implements OnInit {
 	}
 
 	private printWelcome(): void {
-		var welcome = [
+		const welcome = [
 			'%c' +
 			'XXXXXXX           XXXXXXX',
 			' X:::::X         X:::::X',
@@ -50,7 +50,7 @@ export class XoMaterialAppComponent implements OnInit {
 			'XXXXXXX           XXXXXXX    ooooooooooo'
 		];
 
-		console.log(welcome.join("\n"), 'font-weight: bold; color: #0d5aa1');
+		console.log(welcome.join('\n'), 'font-weight: bold; color: #0d5aa1');
 	}
 
 	gTagPageView() {

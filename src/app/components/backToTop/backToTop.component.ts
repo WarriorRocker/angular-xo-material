@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject, Input } from "@angular/core";
-import { DOCUMENT } from "@angular/platform-browser";
+import { Component, OnInit, Inject, Input } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { Subject, fromEvent } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
