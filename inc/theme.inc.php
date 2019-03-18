@@ -51,6 +51,7 @@ add_action('init', function() {
 
 add_action('wp_enqueue_scripts', function() {
 	wp_deregister_style('dashicons');
+	wp_deregister_style('wp-block-library');
 	wp_deregister_script('wp-embed');
 }, 10, 0);
 
