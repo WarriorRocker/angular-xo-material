@@ -2,9 +2,22 @@
 
 :host {
 	.image {
+		position: relative;
 		font-size: 0;
 
+		.spacer {
+			position: relative;
+			z-index: 1;
+		}
+
 		a {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
 			img {
 				max-width: 100%;
 			}

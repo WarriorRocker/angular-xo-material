@@ -1,4 +1,5 @@
 <div class="image mat-elevation-z1">
+	<div class="spacer" [style.padding-bottom]="((section.image.height / section.image.width) * 100) + '%'"></div>
 	<a [href]="section.image.url" target="_blank">
 		<img [src]="section.image.url"
 			 [alt]="section.image.alt"
