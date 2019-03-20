@@ -10,10 +10,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { XoPostResolver } from 'angular-xo';
+import { XoPostResolver, XoTermResolver } from 'angular-xo';
 
 import { XoMaterialPostsPageComponent } from './posts.component';
 import { XoMaterialPostsPagePostComponent } from './post/post.component';
+import { XoMaterialPostsPageTermComponent } from './term/term.component';
 
 import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadcrumbs.module';
 import { XoMaterialSectionsModule } from '../../components/sections/sections.module';
@@ -31,12 +32,25 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 				component: XoMaterialPostsPageComponent,
 				children: [
 					{
-						path: ':slug',
-						pathMatch: 'full',
-						component: XoMaterialPostsPagePostComponent,
-						resolve: {
-							post: XoPostResolver
-						}
+						path: ':category',
+						children: [
+							{
+								path: '',
+								pathMatch: 'full',
+								component: XoMaterialPostsPageTermComponent,
+								resolve: {
+									term: XoTermResolver
+								}
+							},
+							{
+								path: ':slug',
+								pathMatch: 'full',
+								component: XoMaterialPostsPagePostComponent,
+								resolve: {
+									post: XoPostResolver
+								}
+							}
+						]
 					}
 				]
 			}
@@ -44,7 +58,8 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 	],
 	declarations: [
 		XoMaterialPostsPageComponent,
-		XoMaterialPostsPagePostComponent
+		XoMaterialPostsPagePostComponent,
+		XoMaterialPostsPageTermComponent
 	]
 })
 export class XoMaterialPostsPageModule { }
