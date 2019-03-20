@@ -15,8 +15,7 @@ add_action('init', function() {
 		),
 		'menu_icon' => 'dashicons-admin-post',
 		'rewrite' => array(
-			'slug' => 'blog/%blog_category%',
-			//'slug' => 'blog'
+			'slug' => 'blog/%blog_category%'
 		)
 	));
 }, 10, 0);
@@ -79,20 +78,6 @@ add_filter('post_type_link', function($post_link, WP_Post $post) {
 	}
 	return $post_link;
 }, 1, 3);
-
-// Modify blog post link to include category
-//add_filter('post_type_link', function($post_link, WP_Post $post) {
-//    if ((is_object($post)) && ($post->post_type == 'blog')
-//        && (($termPos = strpos($post_link, 'blog/')) !== false)) {
-//        $termPos += 5;
-//        $postTerms = wp_get_object_terms($post->ID, 'blog_category');
-//        $termSlug = (($postTerms) ? $postTerms[0]->slug : 'category');
-
-//        $post_link = substr($post_link, 0, $termPos) . $termSlug . '/' . substr($post_link, $termPos);
-//    }
-//    return $post_link;
-//}, 1, 3);
-
 
 // Add rewrite rule for blog post links
 add_filter('init', function() {

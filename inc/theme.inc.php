@@ -5,8 +5,8 @@ add_action('init', function() {
 	add_theme_support('title-tag');
 
 	register_nav_menus(array(
-		'header_left' => __('Header Left'),
-		'header_right' => __('Header Right')
+		'header_left' => __('Header Left', 'xo-material'),
+		'header_right' => __('Header Right', 'xo-material')
 	));
 }, 10, 0);
 
