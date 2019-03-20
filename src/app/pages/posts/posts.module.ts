@@ -33,20 +33,21 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 				children: [
 					{
 						path: ':category',
+						resolve: {
+							term: XoTermResolver
+						},
 						children: [
 							{
 								path: '',
 								pathMatch: 'full',
-								component: XoMaterialPostsPageTermComponent,
-								resolve: {
-									term: XoTermResolver
-								}
+								component: XoMaterialPostsPageTermComponent
 							},
 							{
 								path: ':slug',
 								pathMatch: 'full',
 								component: XoMaterialPostsPagePostComponent,
 								resolve: {
+									//term: XoTermResolver,
 									post: XoPostResolver
 								}
 							}

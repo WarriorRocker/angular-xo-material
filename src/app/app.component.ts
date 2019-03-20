@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-
-import { tap, filter } from 'rxjs/operators';
-
-import { XoPostService } from 'angular-xo';
 
 declare var gtag: any;
 
@@ -16,12 +12,12 @@ declare var gtag: any;
 export class XoMaterialAppComponent implements OnInit {
 	uaTrackingId: string = 'UA-125273296-1';
 
-	constructor(private _router: Router, private _title: Title,
-		private _post: XoPostService) {
-		this._post.post$
-			.subscribe((post) => {
-				if (post)
-					this.gTagPageView();
+	constructor(private _router: Router, private _title: Title) {
+		this._router.events
+			.subscribe((event) => {
+				if (event instanceof NavigationEnd) {
+					setTimeout(() => this.gTagPageView(), 0);
+				}
 			});
 	}
 

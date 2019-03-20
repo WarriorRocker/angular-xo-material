@@ -196,10 +196,18 @@ add_action('acf/init', function() {
 					)
 				)
 			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'taxonomy',
+					'operator' => '==',
+					'value' => 'blog_category',
+				),
+			)
 		)
 	));
 }, 10, 0);
-
 
 add_filter('acf/format_value/key=xo_content_sections', function ($value, $postId, $field) {
 	if ((empty($value)) || (!is_array($value)))
