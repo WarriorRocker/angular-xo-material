@@ -1,5 +1,6 @@
 <?php
 
+// Register basic theme support and features
 add_action('init', function() {
 	add_theme_support('title-tag');
 
@@ -9,6 +10,7 @@ add_action('init', function() {
 	));
 }, 10, 0);
 
+// Remove various unused WordPress add-ins and hooks
 add_action('init', function() {
 	remove_action('wp_head', '_wp_render_title_tag', 1);
 	remove_action('wp_head', 'wp_generator');
@@ -49,27 +51,9 @@ add_action('init', function() {
 	}, 10, 1);
 }, 10, 0);
 
+// Remove various unused WordPress styles and scripts
 add_action('wp_enqueue_scripts', function() {
 	wp_deregister_style('dashicons');
 	wp_deregister_style('wp-block-library');
 	wp_deregister_script('wp-embed');
-}, 10, 0);
-
-add_action('init', function() {
-	register_post_type('blog', array(
-		'labels' => array(
-			'name' => __('Blog'),
-			'singular_name' => __('Blog')
-		),
-		'public' => true,
-		'has_archive' => true,
-		'hierarchical' => false,
-		'supports' => array(
-			'title', 'revisions', 'page-attributes'
-		),
-		'menu_icon' => 'dashicons-admin-post',
-		'rewrite' => array(
-			'slug' => 'blog',
-		)
-	));
 }, 10, 0);
