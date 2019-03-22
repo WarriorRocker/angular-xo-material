@@ -8,8 +8,8 @@ import { XoGlobals, XoMenus, XoApiMenusService } from 'angular-xo';
 	styleUrls: ['./header.component.scss']
 })
 export class XoMaterialHeaderComponent implements OnInit {
-	navItemsLeft: Array<XoMenus.NavigationItem>;
-	navItemsRight: Array<XoMenus.NavigationItem>;
+	navItemsLeft: Array<XoMenus.Menu>;
+	navItemsRight: Array<XoMenus.Menu>;
 
 	constructor(private _menus: XoApiMenusService) { }
 
