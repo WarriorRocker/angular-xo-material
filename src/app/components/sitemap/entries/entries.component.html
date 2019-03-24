@@ -1,0 +1,8 @@
+<mat-list>
+	<ng-container *ngFor="let entry of entries">
+		<mat-list-item>
+			<a [routerLink]="entry.url">{{entry.title}}</a>
+		</mat-list-item>
+		<xo-material-sitemap-entries [entries]="entry.children" *ngIf="entry.children.length"></xo-material-sitemap-entries>
+	</ng-container>
+</mat-list>

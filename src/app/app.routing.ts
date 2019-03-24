@@ -16,5 +16,9 @@ export const XoMaterialAppLazyRoutes: Routes = [
 	{
 		path: 'xo-material-page-posts',
 		loadChildren: './pages/posts/posts.module#XoMaterialPostsPageModule',
+	},
+	{
+		path: 'xo-material-page-sitemap',
+		loadChildren: './pages/sitemap/sitemap.module#XoMaterialSitemapPageModule',
 	}
 ];

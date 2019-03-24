@@ -1,0 +1,13 @@
+@import '../../shared/_pages.scss';
+
+:host {
+	@include page-container();
+
+	.content {
+		.content-inner {
+			.content-wrap {
+				flex: 1;
+			}
+		}
+	}
+}

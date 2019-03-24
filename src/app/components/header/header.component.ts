@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { XoGlobals, XoMenus, XoApiMenusService } from 'angular-xo';
+import { XoMenus, XoApiMenusService } from 'angular-xo';
 
 @Component({
 	selector: 'xo-material-header',
