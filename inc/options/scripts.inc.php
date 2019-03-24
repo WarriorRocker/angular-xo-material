@@ -44,12 +44,12 @@ add_action('acf/init', function() {
 				array(
 					'param' => 'options_page',
 					'operator' => '==',
-					'value' => 'theme-options'
+					'value' => 'xo-theme-options-scripts'
 				)
 			)
 		)
 	));
-});
+}, 10, 0);
 
 class XoMaterialScripts
 {
