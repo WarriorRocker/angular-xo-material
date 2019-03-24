@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { XoPostResolver } from 'angular-xo';
+import { XoPostResolver, XoBreadcrumbsResolver } from 'angular-xo';
 
 import { XoMaterialContentPageComponent } from './content.component';
 import { XoMaterialBreadcrumbsModule } from '../../components/breadcrumbs/breadcrumbs.module';
@@ -27,7 +27,8 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 				path: '',
 				component: XoMaterialContentPageComponent,
 				resolve: {
-					post: XoPostResolver
+					post: XoPostResolver,
+					breadcrumbs: XoBreadcrumbsResolver
 				}
 			}
 		])

@@ -10,9 +10,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { XoPostResolver, XoTermResolver } from 'angular-xo';
+import { XoPostResolver, XoTermResolver, XoBreadcrumbsResolver } from 'angular-xo';
 
-import { XoMaterialPostsPageComponent } from './posts.component';
 import { XoMaterialPostsPagePostComponent } from './post/post.component';
 import { XoMaterialPostsPageTermComponent } from './term/term.component';
 
@@ -28,37 +27,34 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 		XoMaterialContentsModule,
 		RouterModule.forChild([
 			{
-				path: '',
-				component: XoMaterialPostsPageComponent,
+				path: ':category',
 				children: [
 					{
-						path: ':category',
+						path: '',
+						pathMatch: 'full',
+						component: XoMaterialPostsPageTermComponent,
 						resolve: {
-							term: XoTermResolver
+							term: XoTermResolver,
+							breadcrumbs: XoBreadcrumbsResolver
+
 						},
-						children: [
-							{
-								path: '',
-								pathMatch: 'full',
-								component: XoMaterialPostsPageTermComponent
-							},
-							{
-								path: ':slug',
-								pathMatch: 'full',
-								component: XoMaterialPostsPagePostComponent,
-								resolve: {
-									//term: XoTermResolver,
-									post: XoPostResolver
-								}
-							}
-						]
+					},
+					{
+						path: ':slug',
+						pathMatch: 'full',
+						component: XoMaterialPostsPagePostComponent,
+						resolve: {
+							term: XoTermResolver,
+							post: XoPostResolver,
+							breadcrumbs: XoBreadcrumbsResolver
+						}
 					}
 				]
 			}
+
 		])
 	],
 	declarations: [
-		XoMaterialPostsPageComponent,
 		XoMaterialPostsPagePostComponent,
 		XoMaterialPostsPageTermComponent
 	]
