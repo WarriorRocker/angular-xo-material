@@ -1,7 +1,7 @@
 {
 	"name": "angular-xo-material",
 	"description": "Xo for Angular WordPress Material Theme",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"author": {
 		"name": "Travis Brown",
 		"email": "warriorrocker@gmail.com"
@@ -36,7 +36,7 @@
 		"@angular/platform-browser-dynamic": "^7.2.8",
 		"@angular/router": "^7.2.8",
 		"@ctrl/ngx-codemirror": "^1.3.9",
-		"angular-xo": "^0.1.7",
+		"angular-xo": "^0.2.0",
 		"codemirror": "^5.44.0",
 		"core-js": "^2.6.5",
 		"hammerjs": "^2.0.8",
