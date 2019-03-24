@@ -10,10 +10,7 @@ add_action('acf/init', function() {
 				'key' => 'xo_sitemap_exclude',
 				'label' => 'Exclude from Sitemap',
 				'name' => 'sitemap_exclude',
-				'type' => 'true_false',
-				'wrapper' => array(
-					'width' => 20
-				)
+				'type' => 'true_false'
 			)
 		),
 		'location' => array (
