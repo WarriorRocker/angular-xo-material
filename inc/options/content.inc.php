@@ -202,8 +202,8 @@ add_action('acf/init', function() {
 				array (
 					'param' => 'taxonomy',
 					'operator' => '==',
-					'value' => 'blog_category',
-				),
+					'value' => 'blog_category'
+				)
 			)
 		)
 	));
