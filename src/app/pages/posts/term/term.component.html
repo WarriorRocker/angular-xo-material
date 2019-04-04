@@ -1,5 +1,5 @@
 ﻿<div class="content">
-	<xo-material-breadcrumbs [breadcrumbs]="breadcrumbs"></xo-material-breadcrumbs>
+	<xo-material-breadcrumbs *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></xo-material-breadcrumbs>
 	<div class="content-inner">
 		<div class="content-wrap">
 			<div *ngIf="term.fields.sections.length" xo-material-sections [sections]="term.fields.sections"></div>
