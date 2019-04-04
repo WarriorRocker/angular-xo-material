@@ -1,9 +1,9 @@
 # Xo for Angular WordPress Material Theme
-The theme used for the Xo for Angular (angularxo.io) documentation site.
+The theme used for the [Xo for Angular](https://angularxo.io) documentation site.
 
 ![Xo for Angular home page screenshot](/screenshot.png?raw=true "Theme home page template")
 
-Use `ng serve` to rapidly develop locally, taking advantage of file watching to compile and reload the development site. Use `ng build` to create a distribution and let Xo serve the site through the main domain without any additional server setup.
+Use [`ng serve`](https://angularxo.io/guides/angular-cli#using-ng-serve) to rapidly develop locally, taking advantage of file watching to compile and reload the development site. Use [`ng build`](https://angularxo.io/guides/angular-cli#using-ng-build) to create a distribution and let Xo serve the site through the main domain without any additional server setup.
 
 Once the theme has been built using `ng build` or `ng build --prod` the source folders are no longer necessary. A theme developer may opt to publish a theme built with Xo that does not include the source or build tools.
 
@@ -11,11 +11,11 @@ Once the theme has been built using `ng build` or `ng build --prod` the source f
 
 This theme comes compiled for production so all assets and application code are the minimal (fastest) size.
 
-1. Download the latest Xo for Angular from the releases page, upload, and activate within WordPress.
+1. Download the latest [Xo for Angular](https://wordpress.org/plugins/xo-for-angular/) from the releases page, upload, and activate within WordPress.
 2. Download the latest Xo Material theme from the releases page, upload, and activate within WordPress.
 3. Create menus, pages, posts, and other content and let Xo do the heavy lifting.
 
-This theme also makes use of ACF Pro, a fantastic plugin for adding configurable fields to various items within WordPress such as pages, posts, menus, etc. Without ACF installed only the default theme is usable as it only makes use of the wordpress default editor.
+This theme also makes use of ACF Pro, a fantastic plugin for adding configurable fields to various items within WordPress such as pages, posts, menus, etc. Without ACF installed only the default template is usable as it only makes use of the wordpress default editor.
 
 ## Getting Started
 
@@ -27,9 +27,9 @@ This theme also makes use of ACF Pro, a fantastic plugin for adding configurable
    - Check that the Src Index is set as `/src/index.html`.
    - Lastly check that the Dist Index is set as `/dist/index.html`.
    
-3. Using the Live Redirect Mode allows WordPress and other plugins to inject code and content in your theme. Options to include this and the App Config are found under the Live Index section on the Xo -> General Settings -> Index tab.
-   - Check that that the App Config is enabled, this is necessary to instruct the Angular App about the location of the Xo API and other WordPress or theme settings.
-   - Optionally enable Header (wp_head) and Footer (wp_footer) to be included in the index. This theme does not use this and if nto required by other plugins should be disabled to save on performance.
+3. Using the Live [Redirect Mode](https://angularxo.io/guides/wordpress#redirect-mode) allows WordPress and other plugins to inject code and content in your theme. Options to include this and the App Config are found under the Live Index section on the Xo -> General Settings -> Index tab.
+   - Check that that the [App Config](https://angularxo.io/guides/wordpress#live-index) is enabled, this is necessary to instruct the Angular App about the location of the Xo API and other WordPress or theme settings.
+   - Optionally enable Header (wp_head) and Footer (wp_footer) to be included in the index. This theme does not use wp_footer and if not required by other plugins should be disabled to save on performance.
 
 ## Development
 
