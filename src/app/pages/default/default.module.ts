@@ -5,6 +5,7 @@
  */
 
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { XoPostResolver, XoBreadcrumbsResolver } from 'angular-xo';
@@ -15,6 +16,7 @@ import { XoMaterialBackToTopModule } from '../../components/backToTop/backToTop.
 
 @NgModule({
 	imports: [
+		CommonModule,
 		XoMaterialBreadcrumbsModule,
 		XoMaterialBackToTopModule,
 		RouterModule.forChild([
