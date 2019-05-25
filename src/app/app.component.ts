@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Location } from '@angular/common';
+import { Router, NavigationEnd, NavigationError } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { filter } from 'rxjs/operators';
 
 declare var gtag: any;
 
@@ -12,13 +14,19 @@ declare var gtag: any;
 export class XoMaterialAppComponent implements OnInit {
 	uaTrackingId: string = 'UA-125273296-1';
 
-	constructor(private _router: Router, private _title: Title) {
-		this._router.events
-			.subscribe((event) => {
-				if (event instanceof NavigationEnd) {
-					setTimeout(() => this.gTagPageView(), 0);
-				}
-			});
+	constructor(private _router: Router, private _location: Location, private _title: Title) {
+		this._router.events.pipe(
+			filter(event => event instanceof NavigationEnd)
+		).subscribe((event: NavigationEnd) => {
+			setTimeout(() => this.gTagPageView(), 0);
+		});
+
+		this._router.events.pipe(
+			filter(event => event instanceof NavigationError)
+		).subscribe((event: NavigationError) => {
+			this._router.navigate(['/404'], { skipLocationChange: true })
+				.then(() => this._location.go(event.url));
+		});
 	}
 
 	ngOnInit() {

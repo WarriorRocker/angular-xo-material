@@ -51,7 +51,6 @@ import { XoMaterialContentsModule } from '../../components/contents/contents.mod
 					}
 				]
 			}
-
 		])
 	],
 	declarations: [
