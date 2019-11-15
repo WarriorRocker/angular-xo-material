@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to the angular-xo-material theme will be documented in this file.
 
+## 0.2.2 - 2019-11-15
+### Changed
+- Update Angular dependencies to version 8.
+- Update angular-xo dependency to version 0.2.2.
+
 ## 0.2.1 - 2019-04-04
 ### Changed
  - Stability fixes for default page template.
