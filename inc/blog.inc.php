@@ -1,25 +1,5 @@
 <?php
 
-// Register the blog post type
-add_action('init', function() {
-	register_post_type('blog', array(
-		'labels' => array(
-			'name' => __('Blog', 'xo-material'),
-			'singular_name' => __('Blog', 'xo-material')
-		),
-		'public' => true,
-		'has_archive' => true,
-		'hierarchical' => false,
-		'supports' => array(
-			'title', 'revisions', 'page-attributes'
-		),
-		'menu_icon' => 'dashicons-admin-post',
-		'rewrite' => array(
-			'slug' => 'blog/%blog_category%'
-		)
-	));
-}, 10, 0);
-
 // Register blog_category taxonomy
 add_action('init', function () {
 	register_taxonomy('blog_category', 'blog', array(
@@ -40,8 +20,30 @@ add_action('init', function () {
 		),
 		'hierarchical' => false,
 		'rewrite' => array(
-			'slug' => 'blog'
+			'slug' => 'blog',
+			'with_front' => false
 		),
+	));
+}, 10, 0);
+
+// Register the blog post type
+add_action('init', function() {
+	register_post_type('blog', array(
+		'labels' => array(
+			'name' => __('Blog', 'xo-material'),
+			'singular_name' => __('Blog', 'xo-material')
+		),
+		'public' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'supports' => array(
+			'title', 'revisions', 'page-attributes'
+		),
+		'menu_icon' => 'dashicons-admin-post',
+		'rewrite' => array(
+			'slug' => 'blog/%blog_category%',
+			'with_front' => false
+		)
 	));
 }, 10, 0);
 
